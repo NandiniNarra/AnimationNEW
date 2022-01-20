@@ -1,3 +1,7 @@
+
+
+    
+
 *{
     margin:0px;
     padding:0px;
@@ -24,6 +28,65 @@
     display:flex;
     justify-content:flex-end;
     align-items:center;
+}
+.lorem-section{
+    padding:135px 156px 0px 165px;    
+}
+.lorem-heading{
+    padding:0px 0px 96px 0px;
+    margin:0 auto;
+    color:orange;
+    font-family: "Poppins";
+    font-weight:700;
+    font-size:60px;
+    text-align:center;
+}
+.lorem-card-container{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;  
+}
+.card-container{
+    position:relative;
+    box-shadow:0 3px 10px rgb(0 0 0 / 0.2);
+    padding:0px 61px 70px 40px;
+    max-width:400px; 
+    height:370px;
+    backface-visibility: hidden; 
+}
+.card-1{
+    margin:0px 43px 117px 0px;
+}
+.card-2{
+    margin:0px 0px 117px 43px;
+}
+.card-heading{
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size:36px;
+    padding:20px 0px 0px 0px;
+    margin-bottom:15px;
+}
+.description{
+    font-family: "Poppins";
+    font-family: 400;
+    font-size:20px;   
+}
+.sec-action-link{
+    border-radius:25px;
+    padding:13px 33px 11px 33px;
+    border-width:0px;
+    color:white;
+    font-family:"Poppins";
+    font-size:18px;
+    font-weight:700;
+    margin:25px 0px 0px 0px;
+    cursor:pointer;
+}
+.action-link1{
+    position:relative;
+    background-image: linear-gradient(to right,#4A90FF,#AE60D3,#FA3BB1);
+    z-index:1; 
 }
 .btnprimary{
     border:1px solid chocolate;
@@ -111,7 +174,7 @@
 .test{
     display:flex;
     flex-direction:row;
-    justify-content: center;
+    justify-content:center;
 }
 .test-heading{
     font-family: "Poppins";
@@ -137,19 +200,25 @@
     margin:25px 0px 0px 0px;
     cursor:pointer;
 }
-.flipcard{
-    transform-style:preserve-3d;
-    transition:3s linear;
-    position:relative;
+.flip-card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 3s linear;
 }
-.flipcard:hover{
+.flip-card:hover {
     transform:rotateY(180deg);
 }
-.test_1{
+.flip-card:hover .back-side{
+    top:-2%;
+    right:-8%;
     position:relative;
+}
+
+.test_1{
+    position:absolute;
     box-shadow:0 3px 10px rgba(0 0 0/0.2);
     padding:0px 61px 70px 40px;
-    max-width:350px;
+    max-width:400px;
     font-family:"Poppins";
     font-weight:400;
     backface-visibility: hidden;
@@ -448,7 +517,7 @@
     .test{
         display:flex;
         flex-direction:column;
-        align-items: center;
+        align-items:center;
     }
     .test-heading{
         font-size:24px;
@@ -746,7 +815,3 @@
   60%{transform:translateY(1%);}
 
 }
-
-
-    
-
