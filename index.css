@@ -20,6 +20,9 @@
     animation: laptops 5s infinite ease-in;
     animation-direction:normal;
 }
+.menu{
+    margin-right:6px;
+}
 .button-container{
     display:flex;
     justify-content:flex-end;
@@ -117,7 +120,7 @@
     padding: 12px 27px 12px 34px;
     color:white;
     cursor: pointer;
-    transition-duration: 5s;
+    transition-duration:0.1s;
     transition-timing-function: linear;
     z-index: 1;
     position: relative;
@@ -134,7 +137,7 @@
     padding:13px 24px 11px 24px;
     cursor: pointer;
     border-radius:2rem;
-    transition-duration: 5s;
+    transition-duration:0.1s;
     transition-timing-function: linear;
     z-index:1;
     position: relative;
@@ -199,31 +202,54 @@
 .flip-card {
     position: relative;
     transform-style: preserve-3d;
-    transition: 3s linear;
+    transition: 1s linear;
+    width:400px;
+    height:300px;
+    margin:0px 43px 117px 0px;
+}
+.flip-card1{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s linear;
+    width:400px;
+    height:300px;
+    margin:0px 0px 117px 43px;
 }
 .flip-card:hover {
     transform:rotateY(180deg);
 }
-.flip-card:hover .back-side{
+.flip-card1:hover {
+    transform:rotateY(180deg);
+}
+/*.flip-card:hover .back-side{
     top:-2%;
     right:-8%;
     position:relative;
-}
+}*/
 
 .test_1{
     position:absolute;
     box-shadow:0 3px 10px rgba(0 0 0/0.2);
     padding:0px 61px 70px 40px;
-    max-width:400px;
+    /*max-width:400px;*/
     font-family:"Poppins";
     font-weight:400;
     backface-visibility: hidden;
+    height:300px;
+    width:300px;
 }
 .back-side{
+    position:absolute;
     box-shadow:0 3px 10px rgb(0 0 0 / 0.2);
-    max-width:600px;
+    /*max-width:600px;*/
     backface-visibility: hidden;
     transform:rotateY(180deg);
+    padding:0px 61px 70px 40px;
+    height:300px;
+    width:300px;
+}
+.backimage{
+    max-width:300px;
 }
 .card_1{
     margin:0px 43px 117px 0px;
@@ -267,7 +293,7 @@
     margin:0px 0px 73px 0px;
     cursor:pointer;
     position: relative;
-    transition-duration: 5s;
+    transition-duration: 0.1s;
     transition-timing-function: linear;
     z-index:1;
 }
@@ -411,13 +437,17 @@
     align-items:center;
     padding:8px;
 }
-.icon-icons8-facebook:before{
+.icon-icons8-facebook{
     content:"\900";
     font-size:55px;
     color:#483D8B; 
     padding-right:10px;
 }
-.icon-icons8-twitter-circled:before{
+.anchor:hover{
+    animation: icons 2s infinite ease-in;
+    animation-direction:normal;
+}
+.icon-icons8-twitter-circled{
     content: "\e905";
     font-size:55px;
     color:#00BFFF;
@@ -444,7 +474,6 @@
 .iconscontainer{
     display:flex;
     flex-direction:column;
-
 }
 .iconscontainer{
     display:flex;
@@ -727,7 +756,7 @@
 
 }
 .menu:hover{
-    transform: rotate(360deg);
+    transform: rotate(180deg);
     transition: width 2s, height 2s, transform 3s;
 }
 .signup::before{
@@ -753,7 +782,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image:linear-gradient(to left,rgb(183, 144, 57, 0.8),rgb(255, 133, 69, 0.8));
+    background-image: linear-gradient(to left,rgb(183, 144, 57, 0.8),rgb(255, 133, 69, 0.8));
     z-index: -1;
     transition: opacity 0.5s linear;
     opacity: 0;
@@ -797,18 +826,29 @@
 .end-section:hover{
     border:1px solid #FF4A4A;
     color:#FA3B6E;
-    transition-duration: 2s;
+    transition-duration: 0.3s;
     transition-timing-function: linear;
 }
 .anchor:hover{
     color:#FA3B6E;
-    transition-duration: 2s;
+    transition-duration: 0.3s;
     transition-timing-function: linear;
+}
+.b2:hover{
+    background-color:pink;
+    transition-duration: 0.3s;
+    transition-timing-function:linear;
+}
+@keyframes icons{
+    0%{transform:translateY(0);}
+    20%{transform:translateY(-25%);}
+    60%{transform:translateY(-50%);}
+    80%{transform:translateY(-70%);}
 }
 @keyframes laptops {
   0%{transform:translateY(0);}
   20%{transform:translateY(-10%);}
   60%{transform:translateY(1%);}
-
 }
+
 
